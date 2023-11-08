@@ -4,25 +4,17 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 
 @Entity
-public class Calendario extends EntityId {
-    @Column(name = "nome" , nullable = false)
-    private String nome;
-    @Column(name = "valor" , nullable = false)
-    private Double valor;
+public class Calendario {
+    @Column(name = "id_calendario" , nullable = false)
+    private Long id;
 
-    public String getNome() {
-        return nome;
+    @Override
+    public Long getId() {
+        return id;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public Double getValor() {
-        return valor;
-    }
-
-    public void setValor(Double valor) {
-        this.valor = valor;
+    @Override
+    public void setId(Long id) {
+        this.id = id;
     }
 }

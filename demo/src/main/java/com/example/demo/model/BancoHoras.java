@@ -5,24 +5,27 @@ import javax.persistence.Entity;
 
 @Entity
 public class BancoHoras extends Usuario {
-    @Column(name = "cnpj",nullable = false)
-    private String cnpj;
-    @Column(name = "razao_social",nullable = false)
-    private String razaoSocial;
+    @Column(name = "id_banco_horas",nullable = false)
+    private long idBancoHoras;
+    @Column(name = "id_usuario",nullable = false)
+    private long idUsuario;
 
-    public String getCnpj() {
-        return cnpj;
+    public long getIdBancoHoras() {
+        return idBancoHoras;
     }
 
-    public void setCnpj(String cnpj) {
-        this.cnpj = cnpj;
+    public void setIdBancoHoras(long idBancoHoras) {
+        this.idBancoHoras = idBancoHoras;
     }
 
-    public String getRazaoSocial() {
-        return razaoSocial;
+    public long getIdUsuario() {
+        return idUsuario;
     }
 
-    public void setRazaoSocial(String razaoSocial) {
-        this.razaoSocial = razaoSocial;
+    public void setIdUsuario(long idUsuario) {
+        this.idUsuario = idUsuario;
     }
 }
+
+
+
