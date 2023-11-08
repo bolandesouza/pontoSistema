@@ -4,7 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
-public class Pessoa extends EntityId {
+public class Usuario extends EntityId {
     @Column(name = "nome", nullable = false)
     private String nome;
     @Column(name = "telefone", nullable = false)

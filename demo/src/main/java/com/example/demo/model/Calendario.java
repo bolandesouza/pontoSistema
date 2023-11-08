@@ -4,7 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 
 @Entity
-public class Produto extends EntityId {
+public class Calendario extends EntityId {
     @Column(name = "nome" , nullable = false)
     private String nome;
     @Column(name = "valor" , nullable = false)

@@ -4,7 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 
 @Entity
-public class Cliente extends Pessoa {
+public class Empresa extends Usuario {
     @Column(name = "cpf", nullable = false)
     private String cpf;
     @Column(name = "limite_credito", nullable = false)
