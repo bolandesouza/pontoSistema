@@ -99,4 +99,4 @@ public class Usuario extends EntityId {
         this.finalJornada = finalJornada;
     }
 }
-}
+
