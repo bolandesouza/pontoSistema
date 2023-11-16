@@ -1,29 +1,25 @@
 package com.example.demo.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 @Entity
-public class BancoHoras extends Usuario {
-    @Column(name = "id_banco_horas",nullable = false)
-    private long idBancoHoras;
-    @Column(name = "id_usuario",nullable = false)
-    private long idUsuario;
+public class BancoHoras extends EntityId{
+    @Column(name = "total_horas_trabalhadas",nullable = false)
+    private long totalHorasTrabalhadas;
 
-    public long getIdBancoHoras() {
-        return idBancoHoras;
+    public long getTotalHorasTrabalhadas() {
+        return totalHorasTrabalhadas;
     }
 
-    public void setIdBancoHoras(long idBancoHoras) {
-        this.idBancoHoras = idBancoHoras;
+    public void setTotalHorasTrabalhadas(long totalHorasTrabalhadas) {
+        this.totalHorasTrabalhadas = totalHorasTrabalhadas;
     }
 
-    public long getIdUsuario() {
-        return idUsuario;
-    }
-
-    public void setIdUsuario(long idUsuario) {
-        this.idUsuario = idUsuario;
+    @Override
+    public String toString() {
+        return "BancoHoras{" +
+                "totalHorasTrabalhadas=" + totalHorasTrabalhadas +
+                '}';
     }
 }
 

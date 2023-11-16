@@ -1,24 +1,13 @@
 package com.example.demo.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 @Entity
-public class Ocorrencia {
-    @Column(name = "id_ocorrencia" , nullable = false)
-    private long id;
-    @Column(name = "nome_ocorrencia" , nullable = false)
+public class Ocorrencia extends EntityId{
+    @Column(name = "nome_ocorrencia", nullable = false)
     private String nome;
-    @Column(name = "descricao_ocorrencia" , nullable = false)
+    @Column(name = "descricao_ocorrencia", nullable = false)
     private String descricao;
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
 
     public String getNome() {
         return nome;
@@ -34,5 +23,13 @@ public class Ocorrencia {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    @Override
+    public String toString() {
+        return "Ocorrencia{" +
+                "nome='" + nome + '\'' +
+                ", descricao='" + descricao + '\'' +
+                '}';
     }
 }

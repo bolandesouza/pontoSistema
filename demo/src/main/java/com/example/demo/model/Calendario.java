@@ -1,20 +1,35 @@
 package com.example.demo.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 @Entity
-public class Calendario {
-    @Column(name = "id_calendario" , nullable = false)
-    private Long id;
+public class Calendario extends EntityId{
+    @Column(name = "tipo_data_calendario", nullable = false)
+    private TipoData tipoData;
+    @Column(name = "descricao_calendario", nullable = false)
+    private String descricao;
 
-    @Override
-    public Long getId() {
-        return id;
+    public TipoData getTipoData() {
+        return tipoData;
+    }
+
+    public void setTipoData(TipoData tipoData) {
+        this.tipoData = tipoData;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     @Override
-    public void setId(Long id) {
-        this.id = id;
+    public String toString() {
+        return "Calendario{" +
+                "tipoData=" + tipoData +
+                ", descricao='" + descricao + '\'' +
+                '}';
     }
 }

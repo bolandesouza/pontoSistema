@@ -1,12 +1,9 @@
 package com.example.demo.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 @Entity
-public class Empresa extends Usuario {
-    @Column(name = "id_empresa", nullable = false)
-    private Long id;
+public class Empresa extends EntityId{
     @Column(name = "descricao_empresa", nullable = false)
     private String descricao;
     @Column(name = "cnpj_empresa", nullable = false)
@@ -22,15 +19,7 @@ public class Empresa extends Usuario {
     @Column(name = "telefone_empresa", nullable = false)
     private String telefone;
 
-    @Override
-    public Long getId() {
-        return id;
-    }
 
-    @Override
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getDescricao() {
         return descricao;
@@ -48,12 +37,12 @@ public class Empresa extends Usuario {
         this.cnpj = cnpj;
     }
 
-    @Override
+
     public String getEndereco() {
         return endereco;
     }
 
-    @Override
+
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
@@ -82,13 +71,26 @@ public class Empresa extends Usuario {
         this.estado = estado;
     }
 
-    @Override
+
     public String getTelefone() {
         return telefone;
     }
 
-    @Override
+
     public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+
+    @Override
+    public String toString() {
+        return "Empresa{" +
+                "descricao='" + descricao + '\'' +
+                ", cnpj='" + cnpj + '\'' +
+                ", endereco='" + endereco + '\'' +
+                ", bairo='" + bairo + '\'' +
+                ", cidade='" + cidade + '\'' +
+                ", estado='" + estado + '\'' +
+                ", telefone='" + telefone + '\'' +
+                '}';
     }
 }

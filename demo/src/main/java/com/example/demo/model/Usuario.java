@@ -1,15 +1,11 @@
 package com.example.demo.model;
 
-import javax.persistence.Column;
-import javax.persistence.MappedSuperclass;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
-@MappedSuperclass
-public class Usuario extends EntityId {
-    @Column(name = "id_usuario" , nullable = false)
-    private Long id;
+public class Usuario extends EntityId{
     @Column(name = "categoria_usuario" , nullable = false)
-    private CategoriaUsuario categoriaUsuario;
+    private String categoriaUsuario;
     @Column(name = "nome_usuario" , nullable = false)
     private String nome;
     @Column(name = "empresa_usuario" , nullable = false)
@@ -25,21 +21,12 @@ public class Usuario extends EntityId {
     @Column(name = "final_jornada_usuario" , nullable = false)
     private LocalDateTime finalJornada;
 
-    @Override
-    public Long getId() {
-        return id;
-    }
 
-    @Override
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public CategoriaUsuario getCategoriaUsuario() {
+    public String getCategoriaUsuario() {
         return categoriaUsuario;
     }
 
-    public void setCategoriaUsuario(CategoriaUsuario categoriaUsuario) {
+    public void setCategoriaUsuario(String categoriaUsuario) {
         this.categoriaUsuario = categoriaUsuario;
     }
 
@@ -97,6 +84,20 @@ public class Usuario extends EntityId {
 
     public void setFinalJornada(LocalDateTime finalJornada) {
         this.finalJornada = finalJornada;
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                ", categoriaUsuario='" + categoriaUsuario + '\'' +
+                ", nome='" + nome + '\'' +
+                ", empresa=" + empresa +
+                ", nivelAcesso=" + nivelAcesso +
+                ", jornadaTrabalho=" + jornadaTrabalho +
+                ", tolerancia=" + tolerancia +
+                ", inicioJornada=" + inicioJornada +
+                ", finalJornada=" + finalJornada +
+                '}';
     }
 }
 
