@@ -4,7 +4,8 @@ import javax.persistence.*;
 
 @Entity
 public class Calendario extends EntityId{
-    @Column(name = "tipo_data_calendario", nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "tipo_data_calendario", nullable = false)
     private TipoData tipoData;
     @Column(name = "descricao_calendario", nullable = false)
     private String descricao;

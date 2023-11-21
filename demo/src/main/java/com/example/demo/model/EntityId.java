@@ -1,7 +1,7 @@
 package com.example.demo.model;
 
 import javax.persistence.*;
-@Entity
+
 @MappedSuperclass
 public class EntityId {
     @Id

@@ -2,17 +2,20 @@ package com.example.demo.model;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-
+@Entity
 public class Usuario extends EntityId{
     @Column(name = "categoria_usuario" , nullable = false)
     private String categoriaUsuario;
     @Column(name = "nome_usuario" , nullable = false)
     private String nome;
-    @Column(name = "empresa_usuario" , nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "empresa_usuario" , nullable = false)
     private Empresa empresa;
-    @Column(name = "nivel_acesso_usuario" , nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "nivel_acesso_usuario" , nullable = false)
     private NivelAcesso nivelAcesso;
-    @Column(name = "jornada_trabalho_usuario" , nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "jornada_trabalho_usuario" , nullable = false)
     private  JornadaTrabalho jornadaTrabalho;
     @Column(name = "tolerancia_usuario" , nullable = false)
     private Double tolerancia;
