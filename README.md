@@ -1,1 +1,1 @@
-Um sistema de marcação de ponto para rastrear as horas de entrada e saída de seus funcionários. O sistema visa melhorar a precisão na gestão das horas de trabalho, permitindo uma supervisão eficaz do tempo de trabalho dos funcionários e o cálculo preciso de horas trabalhadas, horas extras.
+Um sistema de marcação de ponto para rastrear as horas de entrada e saída de seus funcionários. O sistema visa melhorar a precisão na gestão das horas de trabalho, permitindo uma supervisão eficaz do tempo de trabalho dos funcionários.
