@@ -29,7 +29,7 @@ public class BancoHorasController {
         return ResponseEntity.ok(bancoHorasService.getById(idBancoHoras).orElseThrow(() -> new NoSuchElementException("Not found!")));
     }
 
-    @PutMapping
+    @PutMapping("/{idBancoHoras}")
     public BancoHoras updateBancoHoras(@RequestBody BancoHoras bancoHoras) {
         return bancoHorasService.updateBancoHoras(bancoHoras);
     }

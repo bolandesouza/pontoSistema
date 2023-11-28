@@ -30,7 +30,7 @@ public class CalendarioController {
         return ResponseEntity.ok(calendarioService.getById(idCalendario).orElseThrow(() -> new NoSuchElementException("Not found!")));
     }
 
-    @PutMapping
+    @PutMapping("/{idCalendario}")
     public Calendario updateCalendario(@RequestBody Calendario calendario) {
         return calendarioService.updateCalendario(calendario);
     }

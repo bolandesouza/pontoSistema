@@ -30,7 +30,7 @@ public class TipoDataController {
         return ResponseEntity.ok(tipoDataService.getById(idTipoData).orElseThrow(() -> new NoSuchElementException("Not found!")));
     }
 
-    @PutMapping
+    @PutMapping("/{idTipoData}")
     public TipoData updateTipoData(@RequestBody TipoData tipoData) {
         return tipoDataService.updateTipoData(tipoData);
     }

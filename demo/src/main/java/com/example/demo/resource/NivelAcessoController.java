@@ -31,7 +31,7 @@ public class NivelAcessoController {
 
     }
 
-    @PutMapping
+    @PutMapping("/{idNivelAcesso}")
     public NivelAcesso updateNivelAcesso(@RequestBody NivelAcesso nivelAcesso){
         return nivelAcessoService.updateNivelAcesso(nivelAcesso);
     }

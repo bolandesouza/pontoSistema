@@ -31,7 +31,7 @@ public class JornadaTrabalhoController {
 
     }
 
-    @PutMapping
+    @PutMapping("/{idJornada}")
     public JornadaTrabalho updateJornada(@RequestBody JornadaTrabalho jornadaTrabalho){
         return jornadaService.updateJornada(jornadaTrabalho);
     }

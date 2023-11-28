@@ -30,7 +30,7 @@ public class UsuarioController {
         return ResponseEntity.ok(usuarioService.getById(idUsuario).orElseThrow(() -> new NoSuchElementException("Not found!")));
     }
 
-    @PutMapping
+    @PutMapping("/{idUsuario}")
     public Usuario updateUsuario(@RequestBody Usuario usuario) {
         return usuarioService.updaUsuario(usuario);
     }

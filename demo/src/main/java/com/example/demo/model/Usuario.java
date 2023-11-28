@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 @Entity
 public class Usuario extends EntityId{
     @Column(name = "categoria_usuario" , nullable = false)
-    private String categoriaUsuario;
+    private String categoria;
     @Column(name = "nome_usuario" , nullable = false)
     private String nome;
     @ManyToOne
@@ -24,14 +24,14 @@ public class Usuario extends EntityId{
     @Column(name = "final_jornada_usuario" , nullable = false)
     private LocalDateTime finalJornada;
 
-
-    public String getCategoriaUsuario() {
-        return categoriaUsuario;
+    public String getCategoria() {
+        return categoria;
     }
 
-    public void setCategoriaUsuario(String categoriaUsuario) {
-        this.categoriaUsuario = categoriaUsuario;
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
     }
+
 
     public String getNome() {
         return nome;
@@ -92,7 +92,7 @@ public class Usuario extends EntityId{
     @Override
     public String toString() {
         return "Usuario{" +
-                ", categoriaUsuario='" + categoriaUsuario + '\'' +
+                "categoria='" + categoria + '\'' +
                 ", nome='" + nome + '\'' +
                 ", empresa=" + empresa +
                 ", nivelAcesso=" + nivelAcesso +

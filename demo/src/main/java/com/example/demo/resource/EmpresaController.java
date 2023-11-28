@@ -29,7 +29,7 @@ public class EmpresaController {
     public ResponseEntity<Empresa> getEmpresaByID(@PathVariable("idEmpresa") Long idEmpresa) throws Exception {
         return  ResponseEntity.ok(empresaService.getById(idEmpresa).orElseThrow(() -> new NoSuchElementException("Not found!")));
     }
-    @PutMapping
+    @PutMapping("/{idEmpresa}")
     public Empresa updateEmpresa(@RequestBody Empresa empresa){
         return empresaService.updateEmpresa(empresa);
     }

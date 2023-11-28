@@ -11,7 +11,7 @@ public class Empresa extends EntityId{
     @Column(name = "enderco_empresa", nullable = false)
     private String endereco;
     @Column(name = "bairro_empresa", nullable = false)
-    private String bairo;
+    private String bairro;
     @Column(name = "cidade_empresa", nullable = false)
     private String cidade;
     @Column(name = "estado_empresa", nullable = false)
@@ -48,11 +48,11 @@ public class Empresa extends EntityId{
     }
 
     public String getBairo() {
-        return bairo;
+        return bairro;
     }
 
-    public void setBairo(String bairo) {
-        this.bairo = bairo;
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
     }
 
     public String getCidade() {
@@ -87,7 +87,7 @@ public class Empresa extends EntityId{
                 "descricao='" + descricao + '\'' +
                 ", cnpj='" + cnpj + '\'' +
                 ", endereco='" + endereco + '\'' +
-                ", bairo='" + bairo + '\'' +
+                ", bairo='" + bairro + '\'' +
                 ", cidade='" + cidade + '\'' +
                 ", estado='" + estado + '\'' +
                 ", telefone='" + telefone + '\'' +

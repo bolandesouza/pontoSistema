@@ -31,7 +31,7 @@ public class OcorrenciaController {
         return ResponseEntity.ok(ocorrenciaService.getById(idOcorrencia).orElseThrow(() -> new NoSuchElementException("Not found!")));
     }
 
-    @PutMapping
+    @PutMapping("/{idOcorrencia}")
     public Ocorrencia updateOcorrencia(@RequestBody Ocorrencia ocorrencia) {
         return ocorrenciaService.updateOcorrencia(ocorrencia);
     }
