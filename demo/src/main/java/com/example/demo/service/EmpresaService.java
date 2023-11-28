@@ -1,5 +1,6 @@
 package com.example.demo.service;
 
+import com.example.demo.enterprise.ValidationException;
 import com.example.demo.model.Empresa;
 import com.example.demo.repository.EmpresaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,11 @@ public class EmpresaService {
     }
 
     public Empresa saveEmpresa(Empresa empresa){
+
+        if(empresaRepository.findByCnpj(empresa.getCnpj()) != null){
+            throw new ValidationException("Já existe uma empresa com esse CNPJ cadastrado!");
+        }
+
         return empresaRepository.save(empresa);
     }
 
